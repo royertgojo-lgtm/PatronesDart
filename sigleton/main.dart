@@ -1,11 +1,18 @@
 import 'configure.dart';
 
-void main(){
-  final pantallainicio = Configure("es");
-  final pantallaperfil = Configure("en");
+void main() {
+  final pantallaInicio = Configure();
+  final pantallaPerfil = Configure();
 
-  pantallainicio.idioma = "en";
+  print('Idioma de la pantalla de inicio: ${pantallaInicio.idioma}');
+  print('Idioma de la pantalla de perfil: ${pantallaPerfil.idioma}');
 
-  print('idioma de la Pantalla inicio es: ${pantallainicio.idioma}');
-  print("idioma de la Pantalla perfil es: ${pantallaperfil.idioma}");
+  pantallaInicio.idioma = 'en';
+
+  print('Idioma de la pantalla de inicio: ${pantallaInicio.idioma}');
+  print('Idioma de la pantalla de perfil: ${pantallaPerfil.idioma}');
+
+  print(identical(pantallaInicio, pantallaPerfil)
+      ? 'Ambas pantallas son la misma instancia.'
+      : 'Las pantallas son instancias diferentes.');
 }
