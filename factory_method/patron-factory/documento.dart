@@ -1,3 +1,4 @@
 abstract class Documento {
-  String generar (List <int> calificaciones);
+  String generar(List<int> calificaciones);
+  
 }
