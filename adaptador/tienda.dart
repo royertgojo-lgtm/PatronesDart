@@ -1,8 +1,6 @@
 import 'terminal-externa.dart';
 import 'servicio-pago.dart';
 
-
-
 class Tienda {
   //Problema 1: La tienda tiene dos servicios de pago 
   final ServicioPago servicioPago;
