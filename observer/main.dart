@@ -19,3 +19,7 @@ void main(){
   agenda.publicarTarea('Investigar el patrón Facade');
 //Solo el panel recibe el aviso de nueva tarea
 }
+
+//Cuando conviven varios observadores, cada uno puede tener su propia 
+//implementación de la interfaz Observador. Esto permite que cada observador reaccione de manera diferente a los cambios en el sujeto 
+//(en este caso, la Agenda). area en una base de datos o en memoria.
