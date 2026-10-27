@@ -1,5 +1,5 @@
-class SiatemaAudio{
-  void encender() => print('Auidio encendido');
+class SistemaAudio{
+  void encender() => print('Audio encendido');
 
   void apagar() => print('Audio apagado');
 

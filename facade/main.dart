@@ -1,24 +1,19 @@
+import 'cine_facade.dart';
 import 'proyector.dart';
 import 'reproductor.dart';
 import 'sistema_audio.dart';
 
 void main(){
-  final proyector = Proyector();
-  final audio = SiatemaAudio();
-  final reproductor = Reproductor();
+ final cine = CineFacade(Proyector(), SistemaAudio(), Reproductor());
 
   //Iniciar la pelicula 
-  proyector.encender();
-  audio.encender();
-  audio.ajustarVolumen(25);
-  reproductor.reproducir('coyote vs ACME ');
-  //Sin facade, se llama a cada calse y metodo necesarios
-  //para logar reproducir la pelicula 
+  cine.verPelicula('El señor de los anillos', 10);
 
-  
   //Detener la pelicula 
-  reproductor.detener();
-  audio.apagar();
-  proyector.apagar();
+  cine.terminarReproduccion();
 
+  //la facade coordina todos los pasos para lograr el objetivo
+  //El usuario (dev) solo conoce los metodos sencillos  (verPeliculas...)
+  //el procedimento se encuentran en una sola clase (facade)
+  //El usuario (dev) no necesita conocer a las clases involucradas
 }
